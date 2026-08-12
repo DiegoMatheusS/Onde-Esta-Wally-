@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#b51223" />
   <title>Onde Está Wally?</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260812-4" />
 </head>
 <body>
   <main id="app">
@@ -29,11 +29,6 @@
 
       <div class="menu-layout">
         <section class="hero-card">
-          <div class="target-card" aria-hidden="true">
-            <img src="assets/ui/wally.png" alt="" draggable="false" />
-            <span>ENCONTRE-O!</span>
-          </div>
-
           <div class="hero-copy">
             <p class="eyebrow">JOGO DE OBSERVAÇÃO</p>
             <h1 id="gameTitle">ONDE ESTÁ<br><span>WALLY?</span></h1>
@@ -58,6 +53,13 @@
             <button class="start-btn" type="submit"><span>START</span><b>▶</b></button>
           </form>
         </section>
+
+        <div class="mascot-side" aria-hidden="true">
+          <div class="target-card">
+            <img src="assets/ui/wally.png" alt="" draggable="false" />
+            <span>ENCONTRE-O!</span>
+          </div>
+        </div>
 
         <aside class="ranking-card" aria-labelledby="rankingTitle">
           <div class="ranking-heading">
@@ -151,6 +153,6 @@
     </dialog>
   </main>
 
-  <script src="game.js"></script>
+  <script src="game.js?v=20260812-4"></script>
 </body>
 </html>

@@ -51,9 +51,9 @@ img { -webkit-user-drag: none; user-select: none; }
   position: relative;
   z-index: 3;
   display: grid;
-  grid-template-columns: minmax(560px, 830px) minmax(300px, 390px);
-  gap: 28px;
-  width: min(1240px, 100%);
+  grid-template-columns: minmax(520px, 720px) 158px minmax(290px, 360px);
+  gap: 20px;
+  width: min(1320px, 100%);
   align-items: stretch;
 }
 
@@ -100,20 +100,27 @@ h1 {
 h1 span { color: var(--red); }
 .subtitle { max-width: 470px; margin: 22px 0 30px; font-size: 18px; line-height: 1.45; }
 
-.target-card {
-  position: absolute;
+.mascot-side {
+  position: relative;
   z-index: 4;
-  right: 18px;
-  bottom: 18px;
-  width: 166px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  pointer-events: none;
+}
+.target-card {
+  position: relative;
+  width: 150px;
   padding: 12px 12px 9px;
-  transform: rotate(4deg);
+  transform: rotate(3deg);
   border: 3px solid #181516;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 12px 24px rgba(0,0,0,.18);
+  pointer-events: none;
 }
-.target-card img { display: block; width: 100%; max-height: 242px; object-fit: contain; }
+.target-card img { display: block; width: 100%; max-height: 242px; object-fit: contain; pointer-events: none; }
 .target-card span { display: block; margin-top: 4px; text-align: center; font-weight: 1000; color: var(--red); letter-spacing: .08em; }
 
 .start-form { display: grid; gap: 13px; }
@@ -424,6 +431,8 @@ fieldset { margin: 3px 0 0; padding: 0; border: 0; }
   .menu-screen { align-items:flex-start; overflow:auto; padding-top:70px; }
   .menu-layout { grid-template-columns:1fr; max-width:720px; }
   .hero-card { min-height:unset; }
+  .mascot-side { justify-self:center; margin-top:-8px; margin-bottom:-4px; }
+  .target-card { width:132px; transform:rotate(2deg); }
   .ranking-card { min-height:340px; }
   .menu-bottom { position:relative; left:auto; bottom:auto; transform:none; margin-top:24px; }
 }
@@ -431,8 +440,9 @@ fieldset { margin: 3px 0 0; padding: 0; border: 0; }
   .menu-screen { padding:64px 12px 26px; }
   .hero-card { padding:34px 22px 28px; border-radius:25px; }
   h1 { font-size:58px; }
-  .subtitle { padding-right:80px; font-size:15px; }
-  .target-card { right:8px; top:28px; bottom:auto; width:90px; transform:rotate(5deg); }
+  .subtitle { padding-right:0; font-size:15px; }
+  .mascot-side { margin-top:-2px; margin-bottom:-2px; }
+  .target-card { width:108px; transform:rotate(2deg); }
   .target-card span { font-size:9px; }
   .start-btn { height:64px; font-size:26px; }
   .ranking-card { border-radius:25px; }
